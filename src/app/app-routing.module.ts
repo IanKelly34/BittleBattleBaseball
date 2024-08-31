@@ -10,7 +10,7 @@ import { SearchNlTeamsComponent } from './search-nl-teams/search-nl-teams.compon
 import { SearchMilbAaaTeamsComponent } from './search-milb-aaa-teams/search-milb-aaa-teams.component';
 import { SearchMilbAaTeamsComponent } from './search-milb-aa-teams/search-milb-aa-teams.component';
 import { SearchMilbATeamsComponent } from './search-milb-ateams/search-milb-ateams.component';
-
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: "setlineups/:newGameId", component: SetStartingLineupsComponent },
   { path: "game/:gameId", component: GameplayComponent },
   { path: "ballparkconfigure", component: BallParkCoordinatesConfiguratorComponent },
-  { path: "gameconfigure", component: GameConfigureComponent }
+  { path: "gameconfigure", component: GameConfigureComponent },
+  { path: "**", component: ErrorPageComponent }
 ];
 
 @NgModule({
